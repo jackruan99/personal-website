@@ -1,10 +1,15 @@
 from flask import Flask
 
-app = Flask(__main__)
+
+app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'Welcome'
+    return "<h1>Welcome!</h1>"
+
+@app.route('/login')
+def login():
+    return "<h1>Login!</h1>"
     
 if __name__ == '__main__':
     app.run()
